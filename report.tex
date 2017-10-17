@@ -256,7 +256,35 @@
 							\begin{itemize}
 								\item 実習9\\
 								半加算器、全加算器の回路をそれぞれ構成しなさい。また動作確認を行い、真理地表を作成しなさい。
-
+								\item 真理値表
+									\begin{table}[H]
+										\center
+										\caption{半加算器\label{tb:half-adder}}
+										\begin{tabular}{|c|c|c|c|}
+											\hline
+											$X_0$ & $X_1$ & $Y_0$ &$Y_1$ \\ \hline
+											0 & 0 & 0 & 0 \\ \hline
+											0 & 1 & 1 & 0\\ \hline
+											1 & 0 & 1 & 0\\ \hline
+											1 & 1 & 0 & 1\\ \hline
+										\end{tabular}
+									\end{table}
+									\begin{table}[H]
+										\center
+										\caption{全加算器\label{tb:half-adder}}
+										\begin{tabular}{|c|c|c|c|c|}
+											\hline
+											C & $X_0$ & $X_1$ & $Y_0$ &$Y_1$ \\ \hline
+											0 & 0 & 0 & 0 & 0 \\ \hline
+											0 & 0 & 1 & 1 & 0\\ \hline
+											0 & 1 & 0 & 1 & 0\\ \hline
+											0 & 1 & 1 & 0 & 1\\ \hline
+											1 & 0 & 0 & 1 & 0 \\ \hline
+											1 & 0 & 1 & 0 & 1\\ \hline
+											1 & 1 & 0 & 0 & 1\\ \hline
+											1 & 1 & 1 & 1 & 1\\ \hline
+										\end{tabular}
+									\end{table}
 							\end{itemize}
 						\item エンコーダ(ENCODER)、デコーダ(DECODER) \\
 							10進数を4ビットの2進数にコード化するような論理回路をエンコーダ(ENCODER)、
