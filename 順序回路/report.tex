@@ -1,6 +1,7 @@
 \documentclass[dvipdfmx]{jsarticle}
 \usepackage{here}
 \usepackage[dvipdfmx]{graphicx}
+\graphicspath{{./fig/}}
 \begin{document}
 	\title{順序回路}
 	\author{3EC 28 中野将生}
@@ -32,6 +33,7 @@
 					R-Sフリップフロップの回路の動作確認を行い展開特性表、入力要求表及びタイムチャートを作成しなさい。
 					\item 実習2 \\
 					実習1で導き出した展開特性表から特性方程式を導出し、基本論理素子を用いたR-Sフリップフロップを作成し、タイムチャートにより動作を確認しなさい。
+					カルノー図を書き求める。
 				\end{itemize}
 			\item J-Kフリップフロップ \\
 				R-Sフリップフロップ回路は、R,Sのレベルが直接出力を決定するのに対して、J-Kフリップフロップ回路は、
@@ -43,6 +45,7 @@
 					\item 実習4 \\
 						J-Kフリップフロップの入力要求表にR-Sフリップフロップの入力要求表を連結した拡大入力要求表を作成し、
 						それをもとにR-Sフリップフロップを基本部品としたJ-Kフリップフロップ回路を作成し、タイムチャートにより動作を確認しなさい。
+						R-SからJ-Kで変わるのは入力11の場合。真理値表を書きそれを満たす回路を書く。
 					\item 実習5 \\
 						実習4で作成したJ-Kフリップフロップを、クロック入力付J-Kフリップフロップへと変更し、タイムチャートにより動作を確認しなさい。
 				\end{itemize}
@@ -52,12 +55,15 @@
 				\begin{itemize}
 					\item 実習6 \\
 						J-Kフリップフロップ回路を基本部品としてTフリップフロップ回路を作成し、タイムチャートにより動作確認及び展開特性表を作成しなさい。
+						TフリップフロップはJ-KのJ-Kの11の時にQが入れ替わる機能をそのまま使えば良い。J-Kを繋ぐだけ。
 				\end{itemize}
 			\item Dフリップフロップ \\
 				Dフリップフロップ回路は入力の値をそのまま保持するフリップフロップ回路で、例えば入力が「0」であれば出力も"0"、
 				入力が「1」であれば出力も"1"になるといった動作を行う1入力1出力回路である(R-Sフリップフロップを用いて構成することが出来る)
 				\begin{itemize}
-					\item J-Kフリップフロップ回路を基本部品としてDフリップフロップ回路を作成し、タイムチャートにより動作確認及び展開特性表を作成しなさい。
+					\item 実習7 \\
+					J-Kフリップフロップ回路を基本部品としてDフリップフロップ回路を作成し、タイムチャートにより動作確認及び展開特性表を作成しなさい。
+					Dの入力に応じてJにはD,Kには$\bar{D}$を入力する。クロックはANDでマスクする。
 				\end{itemize}
 			\item シフトレジスタ \\
 				シフトレジスタは、入力データを一時記憶し、クロックパルスによって次のビットへデータを送り出す機能を持った論理回路である。\par
@@ -75,6 +81,16 @@
 			\item R-Sフリップフロップ
 				\begin{itemize}
 					\item 実習1
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{rs.eps}
+							\caption{RSフリップフロップタイミングチャート}
+						\end{figure}
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{RS-circuit.pdf}
+							\caption{RSフリップフロップ回路図}
+						\end{figure}
 						\begin{table}[H]
 							\center
 							\caption{真理値表}
@@ -99,6 +115,16 @@
 			\item J-Kフリップフロップ
 				\begin{itemize}
 					\item 実習3
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{jk1.eps}
+							\caption{JKフリップフロップタイミングチャート}
+						\end{figure}
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{JKv-circuit.pdf}
+							\caption{JKフリップフロップ回路図}
+						\end{figure}
 						\begin{table}[H]
 							\center
 							\caption{真理値表}
@@ -136,6 +162,16 @@
 							\end{tabular}
 						\end{table}
 					\item 実習5
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{jk.eps}
+							\caption{JKフリップフロップタイミングチャート}
+						\end{figure}
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{JK-circuit.pdf}
+							\caption{JKフリップフロップ回路図}
+						\end{figure}
 						\begin{table}[H]
 							\center
 							\caption{真理値表}
@@ -158,6 +194,16 @@
 			\item Tフリップフロップ
 				\begin{itemize}
 					\item 実習6
+						\begin{figure}[H]
+							\center
+							\includegraphics[width=5cm]{T.eps}
+							\caption{Tフリップフロップタイミングチャート}
+						\end{figure}
+						\begin{figure}
+							\center
+							\includegraphics[width=5cm]{T-circuit.pdf}
+							\caption{Tフリップフロップ回路図}
+						\end{figure}
 						\begin{table}[H]
 							\center
 							\caption{真理値表}
@@ -174,6 +220,16 @@
 			\item Dフリップフロップ
 				\begin{itemize}
 					\item 実習7
+						\begin{figure}[H]
+							\center
+							\includegraphics[width=5cm]{d.eps}
+							\caption{Dフリップフロップタイミングチャート}
+						\end{figure}[H]
+						\begin{figure}[H]
+							\center
+							\includegraphics[width=5cm]{D-circuit.pdf}
+							\caption{Dフリップフロップ回路図}
+						\end{figure}
 						\begin{table}[H]
 							\center
 							\caption{真理値表}
@@ -194,6 +250,16 @@
 			\item シフトレジスタ
 				\begin{itemize}
 					\item 実習8
+						\begin{figure}[H]
+							\center
+							\includegraphics[width=5cm]{shift.eps}
+							\caption{シフトレジスタタイミングチャート}
+						\end{figure}
+						\begin{figure}[H]
+							\center
+							\includegraphics[width=5cm]{shift-register-circuit.pdf}
+							\caption{シフトレジスタ回路図}
+						\end{figure}
 						\begin{table}[H]
 							\center
 							\caption{ハーフシフトレジスタ1}
