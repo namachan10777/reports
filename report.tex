@@ -46,4 +46,116 @@
 						\item J-Kフリップフロップ(R-S FLIP-FLOP)
 						\item シフトレジスタ(SHIFT REGISTER)
 					\end{itemize}
+				\subsubsection{操作手順}
+					\begin{enumerate}
+						\item 電源スイッチをOFFにする。
+						\item 各実習項目により、パネル上の論理回路を使用して回路を構成する。
+						\item 電源スイッチをONにする
+						\item 各実習項目の実習を行う。入力レベルは設定スイッチにより設定する。
+						\item 実習が終了したら電源スイッチをOFFにした後、接続を外す。
+					\end{enumerate}
+			\subsection{組み合わせ回路の実習}
+				組み合わせ回路(Combinational Logic Circuit)は、出力が入力だけに関係する回路で、
+				基本となる素子として、論理回路(AND)、論理和(OR)、否定(NOT)、論理積の否定(NOT)、論理積の否定(NAND)、論理和の否定(NOR)、などがあり、
+				その応用としてExclusive OR、半加算器、全加算器(FULL ADDER)、エンコーダ、デコーダなどがある。
+				\subsubsection{基本論理回路の実習}
+					組み合わせ回路の基本実習として、論理積、論理和、否定、論理和の否定を実習する。
+					各素子の入力に対する出力を表示器でモニタすることにより、素子の動作確認を行う。
+					\begin{enumerate}
+						\item 論理積(AND) \\
+							論理積は、$Y=A \cdot B$で表現され、入力AとBがいずれも「1」のときのみ、出力Yが"1"、
+							他の条件では全て"0"となるもので、この式を満足する論理回路をANDと呼ぶ。
+							パネル上のAND素子を使用して回路を構成し、入力A，B及び出力Yを表示器に接続して動作確認を行う。
+							\begin{itemize}
+								\item 実習1 \\
+									AND回路の実習を行い、真理地表を作成しなさい
+							\end{itemize}
+						\item 論理和(OR) \\
+							論理積は、$Y=A + B$で表現され、入力AとBがいずれも「0」のときのみ、出力Yが"0"、
+							他の条件では全て"1"となるもので、この式を満足する論理回路をORと呼ぶ。
+							パネル上のOR素子を使用して回路を構成し、表示器により動作確認を行う。
+							\begin{itemize}
+								\item 実習2 \\
+									OR回路の実習を行い、真理地表を作成しなさい
+							\end{itemize}
+						\item 否定(NOT) \\
+							否定は、インバータとも言われ、$Y=\bar{A}$で表現され、入力と出力の関係は常に正反対になり、
+							この式を満足する回路をNOT回路と呼ぶ。
+							パネル上のNOT素子を使用して回路を構成し、表示器により動作確認を行う。
+							\begin{itemize}
+								\item 実習3 \\
+									NOT回路の実習を行い、真理地表を作成しなさい
+							\end{itemize}
+						\item 論理積の否定(NAND) \\
+							論理積の否定は、$Y=\overline{A \cdot B}$で表現され、入力AとBがいずれも「1」のときのみ、出力Yが"0"、
+							他の条件では全て"1"となるもので、この式を満足する論理回路をNAND回路と呼ぶ。
+							パネル上のNAND素子を使用して回路を構成し、表示器により動作確認を行う。
+							\begin{itemize}
+								\item 実習4 \\
+									NAND回路の実習を行い、真理地表を作成しなさい
+							\end{itemize}
+						\item 論理和の否定(NOR) \\
+							論理和の否定は、$Y=\overline{A + B}$で表現され、入力AとBがいずれも「0」のときのみ、出力Yが"1"、
+							他の条件では全て"0"となるもので、この式を満足する論理回路をNOR回路と呼ぶ。
+							パネル上のNOR素子を使用して回路を構成し、表示器により動作確認を行う。
+							\begin{itemize}
+								\item 実習5 \\
+									NOR回路の実習を行い、真理地表を作成しなさい
+							\end{itemize}
+					\end{enumerate}
+				\subsubsection{組み合わせ回路の実習}
+					基本素子を複数接続して論理回路を構成し、その式と動作を確認する応用動作としてド・モルガンの定理証明、
+					排他的論理和、加算器及びエンコーダ・デコーダを実習する。
+					\begin{enumerate}
+						\item ド・モルガンの定理証明 \\
+							ド・モルガンの定理は、式\ref{eq:demorgan1}、及び式\ref{eq:demorgan2}で示される。
+							\begin{eqnarray}
+								\label{eq:demorgan1}
+								\overline{A \cdot B} &=& \bar{A} + \bar{B} \\
+								\label{eq:demorgan2}
+								\overline{A + B} &=& \bar{A} \cdot \bar{B}
+							\end{eqnarray}
+							この式\ref{eq:demorgan1}、及び式\ref{eq:demorgan2}を証明するのであるが、
+							上式を書き直すと、式\ref{eq:demorgan3}及び式\ref{eq:demorgan4}になる。
+							\begin{eqnarray}
+								\label{eq:demorgan3}
+								Y_1 &=& \overline{A \cdot B} \\
+								Y_2 &=& \bar{A} + \bar{B} \\
+								Y_1 &=& Y_2 \\
+								\label{eq:demorgan4}
+								Y_3 &=& \overline{A + B} \\
+								Y_3 &=& \bar{A} \cdot \bar{B} \\
+								Y_3 &=& Y_4
+							\end{eqnarray}
+							式\ref{eq:demorgan3}、\ref{eq:demorgan4}の論理回路をそれぞれパネル上で構成して動作確認を行い、
+							$Y_1=Y_2$,$Y_3=Y_4$であれば証明が成立したと言う方法を取る。
+							\begin{itemize}
+								\item 実習6 \\
+									式\ref{eq:demorgan3}を証明する回路を構成して動作確認を行い、真理地表を作成して、
+									ド・モルガンの定理式\ref{eq:demorgan3}を証明しなさい。
+								\item 実習7 \\
+									式\ref{eq:demorgan4}を証明する回路を構成して動作確認を行い、真理地表を作成して、
+									ド・モルガンの定理式\ref{eq:demorgan4}を証明しなさい。
+							\end{itemize}
+						\item 排他的論理和(Exclusive OR) \\
+							排他的論理和は、$Y = \bar{A} \cdot B + A \cdot \bar{B} = A \oplus B$で表現され、
+							入力AとBが同じレベルのとき、出力Yが"0"、異なるレベルの時は"1"となるもので、この式を満足する論理回路をExclusive OR(EXOR)と言う。
+							\begin{itemize}
+								\item 実習8\\
+									基本論理素子を用いてEXOR回路を設計しなさい。また動作確認を行い、真理値表を作成しなさい。
+							\end{itemize}
+						\item 加算器(ADDER) \\
+							一般に加算器とは2つの入力の和とその最上位からの桁上がりを求める回路である。
+							ここでからの桁上がりを考慮する回路を全加算回路、(Full Adder)と言う。
+							\begin{itemize}
+								\item 半加算器、全加算器の回路をそれぞれ構成しなさい。また動作確認を行い、真理地表を作成しなさい。
+							\end{itemize}
+						\item エンコーダ(ENCODER)、デコーダ(DECODER) \\
+							10進数を4ビットの2進数にコード化するような論理回路をエンコーダ(ENCODER)、
+							4ビットの2進数コードをもとの10進数に戻すような回路をデコーダ(DECODER)といい、それぞれ基本論理素子を用いて構成することが出来る。
+							\begin{itemize}
+								\item 実習10 \\
+									エンコーダ、デコーダをそれぞれ作成しなさい(10進"0"-"9")。また、作成した回路の動作確認を行い、真理地表を作成しなさい。
+							\end{itemize}
+					\end{enumerate}
 \end{document}
