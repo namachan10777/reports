@@ -75,26 +75,153 @@
 			\item R-Sフリップフロップ
 				\begin{itemize}
 					\item 実習1
+						\begin{table}[H]
+							\center
+							\caption{真理値表}
+							\begin{tabular}{|c|c|c|c|}
+								\hline
+								R & S & Q & Q' \\ \hline
+								0 & 0 & 0 & 0 \\ \hline
+								0 & 0 & 1 & 1 \\ \hline
+								0 & 1 & 0 & 1 \\ \hline
+								0 & 1 & 1 & 1 \\ \hline
+								1 & 0 & 0 & 0 \\ \hline
+								1 & 0 & 1 & 0 \\ \hline
+								1 & 1 & 0 & $\times$ \\ \hline
+								1 & 1 & 1 & $\times$ \\ \hline
+							\end{tabular}
+						\end{table}
 					\item 実習2
+						\begin{equation}
+							Q' = S + \bar{R} Q
+						\end{equation}
 				\end{itemize}
 			\item J-Kフリップフロップ
 				\begin{itemize}
 					\item 実習3
+						\begin{table}[H]
+							\center
+							\caption{真理値表}
+							\begin{tabular}{|c|c|c|c|}
+								\hline
+								J & K & Q & Q' \\ \hline
+								0 & 0 & 0 & 0 \\ \hline
+								0 & 0 & 1 & 1 \\ \hline
+								0 & 1 & 0 & 0 \\ \hline
+								0 & 1 & 1 & 0 \\ \hline
+								1 & 0 & 0 & 1 \\ \hline
+								1 & 0 & 1 & 1 \\ \hline
+								1 & 1 & 0 & 1 \\ \hline
+								1 & 1 & 1 & 0 \\ \hline
+							\end{tabular}
+						\end{table}
+						\begin{equation}
+							Q' = J \bar{Q} + \bar{J} \bar{K} Q
+						\end{equation}
 					\item 実習4
+						\begin{table}[H]
+							\center
+							\caption{真理値表}
+							\begin{tabular}{|c|c|c|c|c|c|}
+								\hline
+								J & K & Q & R & S & Q' \\ \hline
+								0 & 0 & 0 & $\times$ & 0 & 0 \\ \hline
+								0 & 0 & 1 & 0 & $\times$& 1 \\ \hline
+								0 & 1 & 0 & $\times$ & 0 & 0 \\ \hline
+								0 & 1 & 1 & 1 & 0 & 0 \\ \hline
+								1 & 0 & 0 & 0 & 1 & 1 \\ \hline
+								1 & 0 & 1 & 0 & $\times$ & 1 \\ \hline
+								1 & 1 & 0 & 0 & 1 & 1 \\ \hline
+								1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+							\end{tabular}
+						\end{table}
 					\item 実習5
+						\begin{table}[H]
+							\center
+							\caption{真理値表}
+							\begin{tabular}{|c|c|c|c|c|}
+								\hline
+								T & J & K & Q & Q' \\ \hline
+								0 & $\times$ & $\times$ & 0 & 0 \\ \hline
+								0 & $\times$ & $\times$ & 1 & 1 \\ \hline
+								1 & 0 & 0 & 0 & 0 \\ \hline
+								1 & 0 & 0 & 1 & 1 \\ \hline
+								1 & 0 & 1 & 0 & 0 \\ \hline
+								1 & 0 & 1 & 1 & 0 \\ \hline
+								1 & 1 & 0 & 0 & 1 \\ \hline
+								1 & 1 & 0 & 1 & 1 \\ \hline
+								1 & 1 & 1 & 0 & 1 \\ \hline
+								1 & 1 & 1 & 1 & 0 \\ \hline
+							\end{tabular}
+						\end{table}
 				\end{itemize}
 			\item Tフリップフロップ
 				\begin{itemize}
 					\item 実習6
+						\begin{table}[H]
+							\center
+							\caption{真理値表}
+							\begin{tabular}{|c|c|c|}
+								\hline
+								T & Q & Q' \\ \hline
+								0 & 0 & 0 \\ \hline
+								0 & 1 & 1 \\ \hline
+								1 & 0 & 1 \\ \hline
+								1 & 1 & 0 \\ \hline
+							\end{tabular}
+						\end{table}
 				\end{itemize}
 			\item Dフリップフロップ
 				\begin{itemize}
 					\item 実習7
+						\begin{table}[H]
+							\center
+							\caption{真理値表}
+							\begin{tabular}{|c|c|c|c|}
+								\hline
+								CK & D & Q & Q' \\ \hline
+								0 & 0 & 0 & 0 \\ \hline
+								0 & 0 & 1 & 1 \\ \hline
+								0 & 1 & 0 & 0 \\ \hline
+								0 & 1 & 1 & 1 \\ \hline
+								1 & 0 & 0 & 0 \\ \hline
+								1 & 0 & 1 & 0 \\ \hline
+								1 & 1 & 0 & 1 \\ \hline
+								1 & 1 & 1 & 1 \\ \hline
+							\end{tabular}
+						\end{table}
 				\end{itemize}
 			\item シフトレジスタ
 				\begin{itemize}
 					\item 実習8
+						\begin{table}[H]
+							\center
+							\caption{ハーフシフトレジスタ1}
+							\begin{tabular}{|c|c|c|c|}
+								\hline
+								S & R & Q & Q' & \bar{Q'} \\ \hline
+								0 & 0 & 0 & 0 & 1 \\ \hline
+								1 & 0 & 0 & 1 & 0 \\ \hline
+								0 & 1 & 0 & 0 & 1 \\ \hline
+								0 & 0 & 1 & 1 & 1 \\ \hline
+								1 & 0 & 1 & 1 & 0 \\ \hline
+								0 & 1 & 1 & 0 & 1 \\ \hline
+							\end{tabular}
+						\end{table}
 					\item 実習9
+						\begin{table}[H]
+							\center
+							\caption{ハーフシフトレジスタ1}
+							\begin{tabular}{|c|c|c|c|}
+								\hline
+								PS & PC & Q & Q' & \bar{Q'} \\ \hline
+								0 & 0 & 0 & 0 & 1 \\ \hline
+								1 & 0 & 0 & 1 & 0 \\ \hline
+								0 & 1 & 0 & 0 & 1 \\ \hline
+								0 & 0 & 1 & 1 & 1 \\ \hline
+								1 & 0 & 1 & 1 & 0 \\ \hline
+								0 & 1 & 1 & 0 & 1 \\ \hline
+							\end{tabular}
 				\end{itemize}
 		\end{enumerate}
 	\section{考察}
