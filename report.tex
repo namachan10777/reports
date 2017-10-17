@@ -340,4 +340,26 @@
 				名称 & 番号 & 型式 \\ \hline
 			\end{tabular}
 		\end{table}
+	\section{考察}
+		式\ref{eq:e1}、式\ref{eq:e2}の論理式で表されるような組み合わせ回路は、そのまま構成してしまうと多くの素子が必要になり、煩雑な回路となる。
+		これらの回路を実際に構成するためにはどのような工夫が必要か説明しなさい。
+		\begin{equation}
+			\label{eq:e1}
+			y = \bar{x_1} \bar{x_2} \bar{x_3} x_4 + \bar{x_1} \bar{x_2} x_3 \bar{x_4} + \bar{x_1} x_2 \bar{x_3} \bar{x_4} + \bar{x_1} x_2 x_3 \bar{x_4} +
+				x_1 \bar{x_2} x_3 \bar{x_4} + x_1 x_2 \bar{x_3} \bar{x_4} + x_1 x_2 x_3 \bar{x_4} + x_1 x_2 x_3 x_4
+		\end{equation}
+		\begin{equation}
+			\label{eq:e2}
+			y = \bar{x_1} \bar{x_2} \bar{x_3} x_4 + \bar{x_1} x_2 x_3 \bar{x_4} + x_1 x_2 x_3 \bar{x_4} + x_1 x_2 \bar{x_3} x_4 + x_1 \bar{x_2} x_3 x_4
+		\end{equation}
+		カルノー図を書いて論理式を簡単化し、その上で共通化出来る部分を共通化して素子を減らす。
+		\begin{equation}
+			\label{eq:ans1}
+			y = x_2 \bar{x_3} \bar{x_4} + \bar{x_1} \bar{x_2} x_4 + x_1 x_2 x_3 + (x_1 + x_2) x_3 \bar{x_4}
+		\end{equation}
+		\begin{equation}
+			\label{eq:ans2}
+			y = \bar{x_1} \bar{x_3} x_4 + \bar{x_3} x_2 x_3 + x_1 x_2 \bar{x_3} + x_1 x_2 x_3 x_4 + x_1 \bar{x_2} x_3 \bar{x_4}
+		\end{equation}
+		式\ref{eq:e1}は式\ref{eq:ans1}はに、式\ref{eq:e2}は式\ref{eq:ans2}に簡単化出来る。
 \end{document}
